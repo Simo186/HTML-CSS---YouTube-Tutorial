@@ -1,0 +1,264 @@
+.youtube-header {
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff; /* White background for header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+
+
+/* Tooltip Styling */
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    bottom: 85%; /* Position tooltip above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 8px;
+    background-color: rgb(175, 172, 172);
+    color: #f3efef;
+    padding: 1px 2px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 10;
+}
+
+/* Show tooltip on button hover */
+button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.header-left .header-middle .header-right{
+    display: flex;
+    align-items: center;
+}
+
+/* Icon Button Styling */
+.header-right button {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+/* Notification Badge */
+.notifications-icon-contianer {
+    position: relative;
+}
+
+.notifications-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 10px;
+}
+
+.header-left,
+.header-middle,
+.header-right {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.header-left {
+    margin-left: 20px; /* Space on the left */
+}
+
+.hamburger {
+    margin-right: 20px; /* Space on the right */
+    display: block; /* Ensure it's visible initially */
+}
+
+.youtube-logo {
+    height: 30px; /* Logo height */
+    margin-left: 50px; /* Space on the left */
+}
+
+.header-middle {
+    margin: 0 20px; /* Space on the sides */
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    margin: 5px; /* Space on the sides */
+    min-width: 0; /* Minimum width for search input */
+    margin-left: 0;
+    flex-shrink: auto;
+    width: 300px;
+    transition: width 0.3s ease;
+}
+
+.search-form input {
+    flex-grow: 1; /* Allow the search input to grow */
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Rounded corners */
+    width: 0; /* Full width for search input */
+}
+
+@media (max-width: 500px) {
+    .search-form {
+        width: 80px; /* Adjust this value to the minimum width you prefer */
+
+    }
+    .youtube-header {
+        padding: 5px;
+    }
+
+    .header-left .user-icon{
+        display: none;
+    }
+    .header-icon{
+        margin: 0 3px;
+    }
+
+    .header-left .header- .header-right{
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
+    }
+}
+
+.search-input {
+    padding: 8px 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Rounded corners */
+    flex-grow: 1; /* Allow the search input to grow */
+    min-width: 0; /* Minimum width for search input */
+    max-width: 100%; /* Maximum width for the search input */    
+}
+
+.search-btn{
+    background: none;
+    border: 2px lightgray;
+    cursor: pointer;
+    margin-left: 5px; /* Space between buttons */
+    padding: 5px 5px; /* Button padding */
+    border-radius: 50%; /* Round user icon */
+    transition: background-color 0.2s; /* Smooth color transition */
+    position: relative;
+}
+
+
+
+
+.search-btn:hover.material-icons{
+    color: #ccc; /* Icon color on hover */
+}
+
+.search-btn:active.material-icons{
+    color: #ccc; /* Icon color on active */
+}
+
+.search-btn:active,
+.mic-btn:active {
+    background-color: #ccc; /* Button active color */
+}
+
+.search-btn:hover,
+.mic-btn:hover {
+    background-color: #ccc; /* Button hover color */
+}
+
+.header-right{
+    margin-right: 20px; /* Space on the right */
+}
+
+
+
+
+.mic-btn {
+    background: none;
+    border: 2px lightgray;
+    cursor: pointer;
+    margin-left: 5px; /* Space between buttons */
+    padding: 5px 5px; /* Button padding */
+    border-radius: 50%; /* Round user icon */
+    transition: background-color 0.2s; /* Smooth color transition */
+    position: relative;
+}
+
+.mic-btn.material-icons {
+    color: #ccc; /* Icon color on hover */
+}
+
+.material-icons {
+    font-size: 24px; /* Icon size */
+    border-radius: 12px;
+}
+
+.header-right i {
+    font-size: 24px; /* Icon size */
+    margin: 0 8px; /* Space between icons */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.header-right :hover{
+    background-color: #ccc; /* Button hover color */
+}
+
+
+.user-icon {
+    height: 50px; /* User icon size */
+    border-radius: 15px /* Round user icon */
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .search-input {
+        width: auto; /* Narrower search input on small screens */
+    }
+
+}
+
+/* Hide search bar on extra small screens and use a search icon instead */
+@media (minimum-width: 500px) {
+    .search-form {
+        display: none;
+    }
+
+    /* Show a search icon instead */
+    .search-icon {
+        display: inline-block; /* Ensure this icon shows up */
+    }
+}
+
+/* Hide search bar on extra small screens and use a search icon instead */
+@media (max-width: 320px) {
+    .search-form {
+        display: none;
+    }
+
+    /* Show a search icon instead */
+    .search-icon {
+        display: inline-block; /* Ensure this icon shows up */
+    }
+}

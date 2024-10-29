@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Clone</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" /> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <!-- Font Awesome Free CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/youtube-general.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/video.css" />
+    <link rel="stylesheet" href="styles/sidebar.css" />
+</head>
+<body>
+    <header class="youtube-header">
+        <div class="header-left">
+            <!-- Hamburger Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="currentColor">
+                <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+            </svg>
+            <!-- YouTube Logo -->
+            <img src="channel-pics/youtubelogo.svg" alt="YouTube Logo" class="youtube-logo" />
+        </div>
+
+        <div class="header-middle">
+            <!-- Search Bar -->
+            <form class="search-form">
+                <input type="text" class="search-input" placeholder="Search" />
+                <button type="submit" class="search-btn">
+                    <i class="material-icons">search</i>
+                    <div class="tooltip">search</div>
+                </button>
+                <!-- Microphone Icon -->
+                <button type="button" class="mic-btn">
+                    <i class="material-icons">mic</i>
+                    <div class="tooltip">search with your voice</div>
+                </button>
+            </form>
+        </div>
+
+        <div class="header-right">
+            <!-- Right Section: Icons (Video Upload, Notifications, User) -->
+             <button type="button" class="video-btn">
+                <i class="material-icons">video_call</i>
+                <div class="tooltip">create</div>
+             </button>
+             <button type="button" class="app-btn">
+            <i class="material-icons">apps</i>
+            <div class="tooltip">apps</div>
+        </button>
+
+        <button type="button" class="notification-btn">
+            <div class="notifications-icon-continer">
+                <i class="material-icons">notifications</i>
+                <div class="notifications-count">4</div>
+                <div class="tooltip">notifications</div>
+            </div>
+        </button>
+            <img src="youtube icons/user-icon.jpg" alt="User Icon" class="user-icon" />
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <div class="sidebar-link"> <!-- sidebar home page icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" 
+            height="23" viewBox="0 0 24 24" width="24" focusable="false" 
+            aria-hidden="true" style="pointer-events: none; display: inherit; 
+            width: 100%; height: 100%;"><path clip-rule="evenodd" 
+            d="M22.146 11.146a.5.5 0 01-.353.854H20v7.5a1.5 1.5 0 01-1.5 1.5H14v-8h-4v8H5.5A1.5 1.5 0 014 19.5V12H2.207a.5.5 0 01-.353-.854L12 1l10.146 10.146Z" 
+            fill-rule="evenodd"></path></svg>
+            <span class="sidebar-label">Home</span>
+        </div>
+        <div class="sidebar-link">  <!--sidebar shorts icon-->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="23" 
+            viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" 
+            style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path clip-rule="evenodd" d="m7.61 15.719.392-.22v-2.24l-.534-.228-.942-.404c-.869-.372-1.4-1.15-1.446-1.974-.047-.823.39-1.642 1.203-2.097h.001L15.13 3.59c1.231-.689 2.785-.27 3.466.833.652 1.058.313 2.452-.879 3.118l-1.327.743-.388.217v2.243l.53.227.942.404c.869.372 1.4 1.15 1.446 1.974.047.823-.39 1.642-1.203 2.097l-.002.001-8.845 4.964-.001.001c-1.231.688-2.784.269-3.465-.834-.652-1.058-.313-2.451.879-3.118l1.327-.742Zm1.993 6.002c-1.905 1.066-4.356.46-5.475-1.355-1.057-1.713-.548-3.89 1.117-5.025a4.14 4.14 0 01.305-.189l1.327-.742-.942-.404a4.055 4.055 0 01-.709-.391c-.963-.666-1.578-1.718-1.644-2.877-.08-1.422.679-2.77 1.968-3.49l8.847-4.966c1.905-1.066 4.356-.46 5.475 1.355 1.057 1.713.548 3.89-1.117 5.025a4.074 4.074 0 01-.305.19l-1.327.742.942.403c.253.109.49.24.709.392.963.666 1.578 1.717 1.644 2.876.08 1.423-.679 2.77-1.968 3.491l-8.847 4.965ZM10 14.567a.25.25 0 00.374.217l4.45-2.567a.25.25 0 000-.433l-4.45-2.567a.25.25 0 00-.374.216v5.134Z" 
+            fill-rule="evenodd"></path></svg>
+            <span class="sidebar-label">Shorts</span>
+        </div>
+        <div class="sidebar-link"> <!-- sidebar subscriptions icon-->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="12" 
+            viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" 
+            style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path clip-rule="evenodd" d="M4 4.5A1.5 1.5 0 015.5 3h13A1.5 1.5 0 0120 4.5H4Zm16.5 3h-17v11h17v-11ZM3.5 6A1.5 1.5 0 002 7.5v11A1.5 1.5 0 003.5 20h17a1.5 1.5 0 001.5-1.5v-11A1.5 1.5 0 0020.5 6h-17Zm7.257 4.454a.5.5 0 00-.757.43v4.233a.5.5 0 00.757.429L15 13l-4.243-2.546Z" 
+            fill-rule="evenodd"></path></svg>
+            <span class="sidebar-label">Subscriptions</span>
+        </div>
+        <div class="sidebar-link"> <!--sidebar trending icon-->
+            <svg xmlns="http://www.w3.org/2000/svg" 
+            fill="currentColor" height="17" viewBox="0 0 24 24" width="24" 
+            focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+            <path clip-rule="evenodd" d="m14 2-1.5.886-5.195 3.07C4.637 7.533 3 10.401 3 13.5c0 4.694 3.806 8.5 8.5 8.5s8.5-3.806 8.5-8.5V1l-1.5 1-3 2L14 5V2ZM8.068 7.248l4.432-2.62v3.175l2.332-1.555L18.5 3.803V13.5c0 3.866-3.134 7-7 7s-7-3.134-7-7c0-2.568 1.357-4.946 3.568-6.252ZM9 15c0-1.226.693-2.346 1.789-2.894L15 10v5c0 1.657-1.343 3-3 3s-3-1.343-3-3Z" 
+            fill-rule="evenodd"></path></svg>
+            <span class="sidebar-label">Trending</span>
+        </div>
+        <div class="sidebar-link"> <!--sidebar music icon-->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="26" viewBox="0 0 24 24" 
+            width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+            <path clip-rule="evenodd" d="M19 3c0-.271-.146-.521-.383-.654-.237-.133-.527-.127-.758.014l-9 5.5c-.223.136-.359.379-.359.64v7.901C8.059 16.146 7.546 16 7 16c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3v-7.08l7.5-4.583v6.064c-.441-.255-.954-.401-1.5-.401-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V3Zm-1.5 13c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5 1.5.672 1.5 1.5 1.5 1.5-.672 1.5-1.5Zm-9 3c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5 1.5.672 1.5 1.5 1.5 1.5-.672 1.5-1.5Zm9-13.42L10 10.162V8.92l7.5-4.584V5.58Z" 
+            fill-rule="evenodd"></path></svg>
+            <span class="sidebar-label">Music</span>
+        </div>
+        <div class="sidebar-link"> <!--sidebar gaming icon-->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="21" 
+            viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" 
+            style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path clip-rule="evenodd" 
+            d="m12 7.75-.772-.464-4.186-2.511L2.5 7.803v6.307L12 19.29l9.5-5.181V7.803l-4.542-3.028-4.186 2.511L12 7.75ZM12 6 7.814 3.488c-.497-.298-1.122-.283-1.604.039L1.668 6.555C1.251 6.833 1 7.3 1 7.803v6.307c0 .548.3 1.054.782 1.316l9.5 5.182c.447.244.989.244 1.436 0l9.5-5.182c.482-.262.782-.768.782-1.316V7.803c0-.502-.25-.97-.668-1.248L17.79 3.527c-.482-.322-1.107-.337-1.604-.039L12 6Zm3.5 6.25c0 .69-.56 1.25-1.25 1.25S13 12.94 13 12.25 13.56 11 14.25 11s1.25.56 1.25 1.25ZM7 8c-.414 0-.75.336-.75.75v1.5h-1.5c-.414 0-.75.336-.75.75s.336.75.75.75h1.5v1.5c0 .414.336.75.75.75s.75-.336.75-.75v-1.5h1.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-1.5v-1.5C7.75 8.336 7.414 8 7 8Zm10.75 3c.69 0 1.25-.56 1.25-1.25s-.56-1.25-1.25-1.25-1.25.56-1.25 1.25.56 1.25 1.25 1.25Z" 
+            fill-rule="evenodd"></path></svg>
+            <span class="sidebar-label">Gaming</span>
+        </div>
+        </div>
+    </nav>
+    
+    <main>
+    <section class="video-grid"> <!-- Grid Container -->
+        <!-- Video 1 -->
+        <div class="video-preview">
+            <div class="video-duration">
+                <img class="thumbnail" src="Thumbnails/hq1.webp" alt="Thumbnail 1" />
+                <span class="video-time"> 12:34 </span>
+            </div>
+            <div class="video-info-grid">
+                <div class="video-info">
+                    <div class="video-details">
+                        <img class="profile-picture" src="channel-pics/channel pic 1.jpg" alt="Channel Picture" />
+                        <div class="video-description">
+                            <p class="video-title">EASIEST Way to Make $2,000 Daily With AI Chat GPT</p>
+                            <p class="video-subtitle">Sponsored &#183</p>
+                            <p class="video-subtitle2">Web3 Evolution</p>
+                            <p class="video-stats">2.2K views &#183; 1 day ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-preview">
+            <img class="thumbnail" src="Thumbnails/hq2.webp" alt="Thumbnail 2" />
+            <div class="video-info-grid">
+                <div class="video-info">
+                    <div class="video-details">
+                        <img class="profile-picture" src="channel-pics/channel pic 2.jpg" alt="Channel Picture" />
+                        <div class="video-description">
+                            <p class="video-title">$2,500 Daily Made Easy: Dominate Passive Income with Uniswap Slippage Bot Strategies</p>
+                            <p class="video-subtitle">Sponsored &#183</p>
+                            <p class="video-subtitle2">Web3 Evolution</p>
+                            <p class="video-stats">68K views &#183; 4 days ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-preview">
+            <img class="thumbnail" src="Thumbnails/hq3.webp" alt="Thumbnail 3" />
+            <div class="video-info-grid">
+                <div class="video-info">
+                    <div class="video-details">
+                        <img class="profile-picture" src="channel-pics/channel pic 3.jpg" alt="Channel Picture" />
+                        <div class="video-description">
+                            <p class="video-title">Laziest $10/Day 🤑 in Passive Income – Make Money Online</p>
+                            <p class="video-stats">100K views &#183; 5 days ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="video-preview">
+            <img class="thumbnail" src="Thumbnails/hq4.webp" alt="Thumbnail 4" />
+            <div class="video-info-grid">
+                <div class="video-info">
+                    <div class="video-details">
+                        <img class="profile-picture" src="channel-pics/channel pic 4.jpg" alt="Channel Picture" />
+                        <div class="video-description">
+                            <p class="video-title">10 AI TOOLS - You Must Know in 2024!!!</p>
+                            <p class="video-stats">648K views &#183; 9 months ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video 5 -->
+        <div class="video-preview">
+            <img class="thumbnail" src="Thumbnails/hq5.webp" alt="Thumbnail 5" />
+            <div class="video-info-grid">
+                <div class="video-info">
+                    <div class="video-details">
+                        <img class="profile-picture" src="channel-pics/channel pic 5.jpg" alt="Channel Picture" />
+                        <div class="video-description">
+                            <p class="video-title">7 AI Tools That WILL Make You RICH</p>
+                            <p class="video-stats">174K views &#183; 2 months ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video 6 -->
+        <div class="video-preview">
+            <img class="thumbnail" src="Thumbnails/hq6.webp" alt="Thumbnail 6" />
+            <div class="video-info-grid">
+                <div class="video-info">
+                    <div class="video-details">
+                        <img class="profile-picture" src="channel-pics/channel pic 6.jpg" alt="Channel Picture" />
+                        <div class="video-description">
+                            <p class="video-title">10 AI Animation Tools You Won’t Believe are Free</p>
+                            <p class="video-stats">218K views &#183; 3 weeks ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Video 7 -->
+        <div class="video-preview">
+            <img class="thumbnail" src="Thumbnails/hq7.webp" alt="Thumbnail 7" />
+            <div class="video-info-grid">
+                <div class="video-info">
+                    <div class="video-details">
+                        <img class="profile-picture" src="channel-pics/channel pic 7.jpg" alt="Channel Picture" />
+                        <div class="video-description">
+                            <p class="video-title">3 PYTHON AUTOMATION PROJECTS FOR BEGINNERS</p>
+                            <p class="video-subtitle">Internet Made Coder</p>
+                            <p class="video-stats">1.6M views &#183; 2 years ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Video 8 -->
+        <div class="video-preview">
+            <img class="thumbnail" src="Thumbnails/hq8.webp" alt="Thumbnail 8" />
+            <div class="video-info-grid">
+                <div class="video-info">
+                    <div class="video-details">
+                        <img class="profile-picture" src="channel-pics/channel pic 8.jpg" alt="Channel Picture" />
+                        <div class="video-description">
+                            <p class="video-title">So, you want to be a programmer?</p>
+                            <p class="video-subtitle">ForrestKnight</p>
+                            <p class="video-stats">362K views &#183; 5 months ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Video 9 -->
+        <div class="video-preview">
+            <img class="thumbnail" src="Thumbnails/hq9.webp" alt="Thumbnail 9" />
+            <div class="video-info-grid">
+                <div class="video-info">
+                    <div class="video-details">
+                        <img class="profile-picture" src="channel-pics/channel pic 9.jpg" alt="Channel Picture" />
+                        <div class="video-description">
+                            <p class="video-title">Build and Deploy a Banking App with Finance Management Dashboard Using Next.js 14</p>
+                            <p class="video-stats">796K views &#183; 5 months ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Video 10 -->
+        <div class="video-preview">
+            <img class="thumbnail" src="Thumbnails/hq10.webp" alt="Thumbnail 10" />
+            <div class="video-info-grid">
+                <div class="video-info">
+                    <div class="video-details">
+                        <img class="profile-picture" src="channel-pics/channel pic 10.jpg" alt="Channel Picture" />
+                        <div class="video-description">
+                            <p class="video-title">THE BIGGEST REACT.JS COURSE ON THE INTERNET ( PART 1 )</p>
+                            <p class="video-stats">133K views &#183; 3 weeks ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Video 11 -->
+        <div class="video-preview">
+            <img class="thumbnail" src="Thumbnails/hq11.webp" alt="Thumbnail 11" />
+            <div class="video-info-grid">
+                <div class="video-info">
+                    <div class="video-details">
+                        <img class="profile-picture" src="channel-pics/channel pic 11.jpg" alt="Channel Picture" />
+                        <div class="video-description">
+                            <p class="video-title">ASMR Programming - Coding Pacman - No Talking</p>
+                            <p class="video-stats">2.8M views &#183; 1 year ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Video 12 -->
+        <div class="video-preview">
+            <img class="thumbnail" src="Thumbnails/hq12.webp" alt="Thumbnail 12" />
+            <div class="video-info-grid">
+                <div class="video-info">
+                    <div class="video-details">
+                        <img class="profile-picture" src="channel-pics/channel pic 12.jpg" alt="Channel Picture" />
+                        <div class="video-description">
+                            <p class="video-title">ChatGPT o1: Turtle Strategy in Python Makes 319%</p>
+                            <p class="video-stats">75K views &#183; 1 month ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Video 13 -->
+        <div class="video-preview">
+            <img class="thumbnail" src="Thumbnails/hq13.webp" alt="Thumbnail 13" />
+            <div class="video-info-grid">
+                <div class="video-info">
+                    <div class="video-details">
+                        <img class="profile-picture" src="channel-pics/channel pic 13.jpg" alt="Channel Picture" />
+                        <div class="video-description">
+                            <p class="video-title">Coding with Cursor AI | Is this the Future of Coding?!</p>
+                            <p class="video-stats">69K views &#183; 1 month ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Video 14 -->
+        <div class="video-preview">
+            <img class="thumbnail" src="Thumbnails/hq14.webp" alt="Thumbnail 14" />
+            <div class="video-info-grid">
+                <div class="video-info">
+                    <div class="video-details">
+                        <img class="profile-picture" src="channel-pics/channel pic 14.jpg" alt="Channel Picture" />
+                        <div class="video-description">
+                            <p class="video-title">GitHub Basics Made Easy: A Fast Beginner's Tutorial!</p>
+                            <p class="video-stats">155K views &#183; 1 year ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Video 15 -->
+        <div class="video-preview">
+            <img class="thumbnail" src="Thumbnails/hq15.webp" alt="Thumbnail 15" />
+            <div class="video-info-grid">
+                <div class="video-info">
+                    <div class="video-details">
+                        <img class="profile-picture" src="channel-pics/channel pic 15.jpg" alt="Channel Picture" />
+                        <div class="video-description">
+                            <p class="video-title">Personal Portfolio Website using HTML & CSS</p>
+                            <p class="video-stats">1.1M views &#183; 1 year ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
